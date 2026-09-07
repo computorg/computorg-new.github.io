@@ -5,6 +5,26 @@
   <link>https://computo-journal.org/</link>
   <description>Latest published articles from Computo Journal</description>
   <item>
+    <title>Comparative analysis of stopping criteria for multi-objective evolutionary algorithms: from benchmark problems to industrial application - Manon Perrignon, Magalie Houée-Bigot, Romain Jeantet, Thomas Croguennec and Mathieu Emily</title>
+    <link>https://computo-journal.org/published-202609-perrignon-multi/</link>
+    <guid>https://computo-journal.org/published-202609-perrignon-multi/</guid>
+    <pubDate>Thu, 03 Sep 2026 00:00:00 GMT</pubDate>
+    <description>Multi-objective optimization problems are commonly solved
+    using evolutionary algorithms, which typically terminate after a
+    user-defined number of generations without guaranteeing solution
+    optimality. Stopping criteria can address this limitation by
+    determining when the algorithm has converged to high-quality
+    solutions. This study compares four existing stopping criteria and
+    proposes a novel criterion designed to balance computational cost
+    and solution quality. The criteria are first evaluated on classical
+    multi-objective benchmark problems, then applied to test cases where
+    optimal solutions are known and can be compared with those obtained
+    after implementing each stopping criterion. Finally, the criteria
+    are applied to a food process optimization case study. This analysis
+    identifies the most effective criterion for achieving this trade-off
+    in practical applications.</description>
+  </item>
+  <item>
     <title>Should we correct the bias in Confidence Bands for Repeated Functional Data? - Emilie Devijver and Adeline Samson</title>
     <link>https://computo-journal.org/published-202606-devijver-scb/</link>
     <guid>https://computo-journal.org/published-202606-devijver-scb/</guid>
@@ -26,6 +46,40 @@
     dimension selection. We illustrate these strategies through an
     extensive simulation study. We conclude with an application to real
     data.</description>
+  </item>
+  <item>
+    <title>Detecting adverse high-order drug combinations from individual case safety reports using computational statistics on disproportionality measures - Jules Bangard, Einar Holsbø, Kristian Svendsen, Vittorio Perduca and Étienne Birmelé</title>
+    <link>https://computo-journal.org/published-202605-bangard-adverse/</link>
+    <guid>https://computo-journal.org/published-202605-bangard-adverse/</guid>
+    <pubDate>Wed, 15 Jul 2026 00:00:00 GMT</pubDate>
+    <description>Adverse drug reactions linked to the intake of drug
+    combinations are a critical concern in pharmacovigilance,
+    particularly as the controlled environment of clinical trials often
+    lacks the scale and diversity to detect rare events involving
+    multiple medications. While spontaneous reporting systems provide
+    the necessary breadth for post-market surveillance, identifying
+    overrepresented drug cocktails within such large-scale data remains
+    a significant computational challenge. This study introduces a
+    computational framework for the detection of drug cocktails
+    associated with adverse events, leveraging disproportionality
+    analysis on individual case safety reports. By integrating the
+    Anatomical Therapeutic Chemical classification, the framework
+    extends beyond individual drugs to capture hierarchical
+    pharmacological relationships, enabling exploration of the space of
+    drug combinations beyond pairwise analysis. To address biases
+    inherent in existing disproportionality measures, we employ a
+    hypergeometric risk metric, while a Markov Chain Monte Carlo
+    algorithm provides robust empirical p-value estimation for the risk
+    associated with cocktails. A genetic algorithm further facilitates
+    efficient identification of high-risk drug cocktails. A
+    post-treatment step based on penalized logistic regression allows
+    distinguishing true pharmacological interactions from combined
+    individual effects for cocktails of any size. Validation on
+    synthetic and FDA Adverse Event Reporting System data demonstrates
+    the method’s efficacy in detecting established drugs and drug
+    combinations associated with myopathy-related adverse events.
+    Implemented as an R package, this framework offers a reproducible,
+    scalable tool for post-market drug safety surveillance.</description>
   </item>
   <item>
     <title>Variational inference for approximate objective priors using neural networks - Nils Baillie, Antoine Van Biesbroeck and Clément Gauchy</title>
@@ -172,52 +226,6 @@
     limitations of time-consuming IBMs simulations by implementing new
     efficient algorithms based on thinning methods, which are compiled
     using the `Rcpp` package while providing a user-friendly interface.</description>
-  </item>
-  <item>
-    <title>Spectral Bridges - Félix Laplante and Christophe Ambroise</title>
-    <link>http://computo-journal.org/published-202412-ambroise-spectral/</link>
-    <guid>http://computo-journal.org/published-202412-ambroise-spectral/</guid>
-    <pubDate>Fri, 13 Dec 2024 00:00:00 GMT</pubDate>
-    <description>In this paper, Spectral Bridges, a novel clustering
-    algorithm, is introduced. This algorithm builds upon the traditional
-    k-means and spectral clustering frameworks by subdividing data into
-    small Voronoï regions, which are subsequently merged according to a
-    connectivity measure. Drawing inspiration from Support Vector
-    Machine’s margin concept, a non-parametric clustering approach is
-    proposed, building an affinity margin between each pair of Voronoï
-    regions. This approach delineates intricate, non-convex cluster
-    structures and is robust to hyperparameter choice. The numerical
-    experiments underscore Spectral Bridges as a fast, robust, and
-    versatile tool for clustering tasks spanning diverse domains. Its
-    efficacy extends to large-scale scenarios encompassing both
-    real-world and synthetic datasets. The Spectral Bridge algorithm is
-    implemented both in Python (\textless
-    https://pypi.org/project/spectral-bridges\textgreater) and R
-    \textless
-    https://github.com/cambroise/spectral-bridges-Rpackage\textgreater).</description>
-  </item>
-  <item>
-    <title>AdaptiveConformal: An `R` Package for Adaptive Conformal Inference - Herbert Susmann, Antoine Chambaz and Julie Josse</title>
-    <link>http://computo-journal.org/published-202407-susmann-adaptive-conformal/</link>
-    <guid>http://computo-journal.org/published-202407-susmann-adaptive-conformal/</guid>
-    <pubDate>Thu, 18 Jul 2024 00:00:00 GMT</pubDate>
-    <description>Conformal Inference (CI) is a popular approach for
-    generating finite sample prediction intervals based on the output of
-    any point prediction method when data are exchangeable. Adaptive
-    Conformal Inference (ACI) algorithms extend CI to the case of
-    sequentially observed data, such as time series, and exhibit strong
-    theoretical guarantees without having to assume exchangeability of
-    the observed data. The common thread that unites algorithms in the
-    ACI family is that they adaptively adjust the width of the generated
-    prediction intervals in response to the observed data. We provide a
-    detailed description of five ACI algorithms and their theoretical
-    guarantees, and test their performance in simulation studies. We
-    then present a case study of producing prediction intervals for
-    influenza incidence in the United States based on black-box point
-    forecasts. Implementations of all the algorithms are released as an
-    open-source `R` package, `AdaptiveConformal`, which also includes
-    tools for visualizing and summarizing conformal prediction
-    intervals.</description>
   </item>
 </channel>
 </rss>

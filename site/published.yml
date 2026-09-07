@@ -1,3 +1,59 @@
+- title: 'Comparative analysis of stopping criteria for multi-objective evolutionary algorithms: from benchmark problems to industrial application'
+  name: published-202609-perrignon-multi
+  authors: Manon Perrignon, Magalie Houée-Bigot, Romain Jeantet, Thomas Croguennec and Mathieu Emily
+  journal: Computo
+  doi: 10.57750/zq4m-sj18
+  year: 2026
+  date: 2026-09-03
+  description: ''
+  abstract: >-
+    Multi-objective optimization problems are commonly solved
+        using evolutionary algorithms, which typically terminate after a
+        user-defined number of generations without guaranteeing solution
+        optimality. Stopping criteria can address this limitation by
+        determining when the algorithm has converged to high-quality
+        solutions. This study compares four existing stopping criteria and
+        proposes a novel criterion designed to balance computational cost
+        and solution quality. The criteria are first evaluated on classical
+        multi-objective benchmark problems, then applied to test cases where
+        optimal solutions are known and can be compared with those obtained
+        after implementing each stopping criterion. Finally, the criteria
+        are applied to a food process optimization case study. This analysis
+        identifies the most effective criterion for achieving this trade-off
+        in practical applications.
+  repo: published-202609-perrignon-multi
+  bibtex: >+
+    @article{perrignon2026,
+    	author = {Perrignon, Manon and Houée-Bigot, Magalie and Jeantet,
+        Romain and Croguennec, Thomas and Emily, Mathieu},
+    	title = {Comparative Analysis of Stopping Criteria for Multi-Objective
+        Evolutionary Algorithms: From Benchmark Problems to Industrial
+        Application},
+    	journal = {Computo},
+    	date = {2026-09-03},
+    	url = {https://computo-journal.org/published-202609-perrignon-multi/},
+    	doi = {10.57750/zq4m-sj18},
+    	issn = {2824-7795},
+    	langid = {en},
+    	abstract = {Multi-objective optimization problems are commonly solved
+        using evolutionary algorithms, which typically terminate after a
+        user-defined number of generations without guaranteeing solution
+        optimality. Stopping criteria can address this limitation by
+        determining when the algorithm has converged to high-quality
+        solutions. This study compares four existing stopping criteria and
+        proposes a novel criterion designed to balance computational cost
+        and solution quality. The criteria are first evaluated on classical
+        multi-objective benchmark problems, then applied to test cases where
+        optimal solutions are known and can be compared with those obtained
+        after implementing each stopping criterion. Finally, the criteria
+        are applied to a food process optimization case study. This analysis
+        identifies the most effective criterion for achieving this trade-off
+        in practical applications.}
+    }
+
+  pdf: ''
+  url: https://computo-journal.org/published-202609-perrignon-multi/
+  status: published
 - title: Should we correct the bias in Confidence Bands for Repeated Functional Data?
   name: published-202606-devijver-scb
   authors: Emilie Devijver and Adeline Samson
