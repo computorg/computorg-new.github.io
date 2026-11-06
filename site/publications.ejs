@@ -49,7 +49,7 @@ for (const item of items) {
                 <% } %>
                 <div class="d-flex justify-content-between align-items-center mb-2" style="font-size:0.95em;">
                   <span class="text-muted"><em>Computo</em>, <%= item.year %>.</span>
-                  <span class="text-muted text-right" style="font-size:0.95em; white-space:nowrap;"><em><a href="<%= doiurl %>" target="_blank" ><%= doiurl %></a></em></span>
+                  <span class="text-muted text-right" style="font-size:0.95em; white-space:nowrap;"><em><% if (hasdoi) { %><a href="https://doi.org/<%- item.doi %>" target="_blank">https://doi.org/<%- item.doi %></a><% } else { %><a href="<%= doiurl %>" target="_blank" ><%= doiurl %></a><% } %></em></span>
                 </div>
                 <div class="btn-group btn-group-sm" role="group" aria-label="Article actions">
                   <a href="<%= doiurl %>" data-toggle="modal" data-target="#articleModal" class="btn btn-outline-secondary btn-sm" style="padding:0.2em 0.6em;">Preview</a>
