@@ -11,6 +11,9 @@ for (const item of items) {
   let bibtitle = item.title.replace(/'/g, "\\'");
   let bibauthors = item.authors.replace(/'/g, "\\'");
   let bibtex = item.bibtex.replace(/'/g, "\\'").replace(/\"/g, '&quot;').replace(/\r?\n/g, "\\n");
+  // DOI badge, same as in the README of each article repository (shields.io escaping: - and _ doubled)
+  let hasdoi = item.doi && !item.doi.includes("xxx");
+  let doibadge = hasdoi ? "https://img.shields.io/badge/DOI-" + encodeURIComponent(item.doi.replace(/-/g, "--").replace(/_/g, "__")) + "-034E79.svg" : "";
   if (item.year !== currentYear) {
     if (currentYear !== null) { %>
 </div> <!-- End previous year section -->
@@ -28,6 +31,11 @@ for (const item of items) {
                 <a href="https://github.com/computorg/<%- item.repo %>" target="_blank" style="margin-left:0;">
                   <img src="https://img.shields.io/github/actions/workflow/status/computorg/<%- item.repo %>/build.yml?label=build&logo=github" class="img-fluid" alt="Build Status" style="margin-top: 0; margin-left:-20px; margin-top:5px; display:block;" />
                 </a>
+                <% if (hasdoi) { %>
+                <a href="https://doi.org/<%- item.doi %>" target="_blank" style="margin-left:0;">
+                  <img src="<%- doibadge %>" class="img-fluid" alt="DOI: <%- item.doi %>" title="DOI: <%- item.doi %>" style="margin-left:-20px; margin-top:5px; display:block;" />
+                </a>
+                <% } %>
               </div>
               <div class="col-md-10 col-9 pl-1">
                 <!-- <h5 class="card-title mb-1" style="font-size:1.1em;">
@@ -41,7 +49,7 @@ for (const item of items) {
                 <% } %>
                 <div class="d-flex justify-content-between align-items-center mb-2" style="font-size:0.95em;">
                   <span class="text-muted"><em>Computo</em>, <%= item.year %>.</span>
-                  <span class="text-muted text-right" style="font-size:0.95em; white-space:nowrap;"><em><a href="<%= doiurl %>" target="_blank" ><%= doiurl %></a></em></span>
+                  <span class="text-muted text-right" style="font-size:0.95em; white-space:nowrap;"><em><% if (hasdoi) { %><a href="https://doi.org/<%- item.doi %>" target="_blank">https://doi.org/<%- item.doi %></a><% } else { %><a href="<%= doiurl %>" target="_blank" ><%= doiurl %></a><% } %></em></span>
                 </div>
                 <div class="btn-group btn-group-sm" role="group" aria-label="Article actions">
                   <a href="<%= doiurl %>" data-toggle="modal" data-target="#articleModal" class="btn btn-outline-secondary btn-sm" style="padding:0.2em 0.6em;">Preview</a>
